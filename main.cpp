@@ -74,7 +74,7 @@ QString getExpressionResult( const QStringList & expressionList )
 						list[ index - 1 ] = QString::number( list.at( index - 1 ).toDouble() - list.at( index + 1 ).toDouble() );
 					else
 					{
-						list[ 0 ] = QString::number( list.at( 0 ).toDouble() + list.at( 1 ).toDouble() );
+						list[ 0 ] = QString::number( list.at( 0 ).toDouble() + list.last().toDouble() );
 						list.removeLast();
 
 						continue;
